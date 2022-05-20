@@ -1,0 +1,151 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: sans-serif;
+
+    background-color: rgb(217, 242, 255);
+}
+button{
+    cursor: pointer;
+}
+p{
+    word-wrap: break-word;
+    padding-right: 20px;
+}
+
+.post{
+    position: absolute;
+
+    width: 430px;
+    height: 330px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 15px solid rgb(96, 191, 255);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.post_uploade
+{
+    margin-top: 20px;
+    margin-right: 40px;
+
+
+    text-align: right;
+    font-size: 13px;
+
+    color: rgb(111, 111, 111);
+}
+
+.post_title
+{
+    padding-left: 20px;
+
+    color: rgb(186, 9, 39);
+}
+.post_content{
+    padding-left: 20px;
+    
+    margin-bottom: 20px;
+}
+
+.remove-post-btn{
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    padding: 10px 20px;
+
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    color:white;
+    background-color: black;
+
+}.remove-post-btn:hover{
+    background-color: red;
+    transition: 0.2s
+}.remove-post-btn:active{
+    background-color: rgb(200, 0, 0);
+}
+
+#create_post{
+    position: fixed;
+
+    padding: 0 20px;
+
+    width: 300px;
+    height: 100vh;
+
+    background-color: white;
+}
+
+#title-input{
+    /*padding: 5px 0;*/
+    margin-top: 50px;
+
+    width: 300px;
+
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+} 
+#content-input{
+    margin: 20px 0;
+
+    width: 300px;
+    height: 100px;
+
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+
+    resize: vertical;
+}
+
+input:focus, textarea:focus{   
+    outline: black solid;
+    outline-width: 1px;
+}
+
+#create_post button{
+    position: relative;
+
+    padding: 10px 30px;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+}
+
+#cancel_btn{
+    padding: 10px 30px;
+
+    border: 2px solid rgb(20, 131, 214);
+
+    background-color: white;
+    color: rgb(20, 131, 214);
+}#cancel_btn:hover{
+    background-color: rgb(241, 249, 255);
+}#cancel_btn:active{
+    background-color: rgb(229, 244, 255);
+}
+
+#post_btn{
+
+    border: none;
+
+    background-color: rgb(20, 131, 214);
+    color: white;
+}#post_btn:hover{
+    background-color: rgb(30, 141, 224);
+}#post_btn:active{
+    background-color: rgb(50, 161, 244);
+}
