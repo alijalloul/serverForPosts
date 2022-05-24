@@ -1,0 +1,1 @@
+INSERT into posts (post_title, post_content, date) VALUES ()
