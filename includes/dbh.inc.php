@@ -10,6 +10,4 @@
         printf("Connect failed: %s\n", mysqli_connect_error());
         
         exit();
-    }else{
-        printf("ksdfknkjkjnsdf");
     }

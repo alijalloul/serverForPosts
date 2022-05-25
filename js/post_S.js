@@ -1,6 +1,13 @@
+include_once 'dbh.inc.php';
+
 let counter = 1;
 
 const post_btn = document.getElementById('post_btn');
+
+<?php
+    $sql = "SELECT * FROM users;";
+    $result = mysqli_query($conn, $sql);
+?>
 
 post_btn.addEventListener('click', () => {
     let newPost = document.createElement('div');

@@ -1,3 +1,5 @@
+<?php include_once 'includes/dbh.inc.php'; ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,17 +13,21 @@
             <button id="cancel_btn">CANCEL</button>
             <button id="post_btn" type="submit">POST</button>
         </form>
-        <div class = "post">
-            <?php
-                echo "<h5 class='post_uploade'>" . date('m/d/Y h:i a') . "</h5>";    
-            ?>
-            <h1 class = "post_title">test </h1>   
-            <p class = "post_content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos accusantium ratione atque impedit ea, numquam voluptatibus adipisci, sint pariatur, cumque nemo optio suscipit consequatur recusandae debitis facere alias ab officia?</p>
-            <button class="remove-post-btn">REMOVE</button>
-        </div>
 
+        <?php
+            $sql = "SELECT * FROM posts;";
+            $result = mysqli_query($conn, $sql);
+            $nbRows = mysqli_num_rows($result);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<div class = 'post' style='top:" . $row['id']*400 . "px;'>" . 
+                         $row['date'] . 
+                        "<h1 class = 'post_title'>" .  $row['post_title'] . "</h1>" . 
+                        "<p class = 'post_content'>" .  $row['post_content'] . "</p>" . 
+                        "<button class = 'remove-post-btn'>REMOVE</button>" . 
+                    "</div>";
+            }
+        ?>
         <script src="js/cancel_S.js"></script>
-        <script src="js/post_S.js"></script>
-        
     </body>
 </html>
